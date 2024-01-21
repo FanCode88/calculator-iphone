@@ -1,13 +1,11 @@
 @import url(font-awesome.min.css);
 @import url(https://fonts.googleapis.com/css?family=Pattaya|Work+Sans:400,200,300);
 
-
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Pattaya', sans-serif;
 }
 
 body {
@@ -16,63 +14,88 @@ body {
   justify-content: center;
   align-items: center;
   background: grey;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 105, 121, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
 }
 
-.container{
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.calculator{
+.calculator {
   background: #131720;
   padding: 30px;
   border-radius: 49px;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.73);
 }
 
-.calculator form input{
+.calculator form input {
   border: 0;
   outline: 0;
   width: 60px;
   height: 60px;
   border-radius: 50px;
-  box-shadow: -8px -8px 15px rgba(255,255,255,0.1), 5px 5px 15px rgba(0,0,0,0.2);
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.2);
   background: transparent;
   font-size: 25px;
-  color:#fff;
+  color: #fff;
   margin: 10px;
   cursor: pointer;
   font-weight: 600;
 }
 
-form .display{
-  display:flex;
+form .display {
+  display: flex;
   justify-content: flex-end;
   margin: 20px -15px;
 }
 
-form .display input{
+form .display input {
   padding: 10px;
-  cursor:context-menu;
+  cursor: context-menu;
   text-align: right;
   flex: 1;
   font-size: 45px;
   box-shadow: none;
-  background-color: #151f30;
+  background: #151f30;
 }
 
-form input.zero{
+form input.zero {
   width: 145px;
 }
+form input.zero:focus {
+  background: gainsboro;
+  color: #333;
+}
 
-form input.operator{
+form input.operators:focus {
+  background: gainsboro;
+  color: #333;
+}
+
+form input.operator {
   color: #fff;
+  background: orangered;
+}
+
+form input.operator:focus {
   background: orange;
 }
 
 form input.operator1 {
   background: gray;
   color: black;
+}
+
+form input.operator1:focus {
+  background: #fff;
 }
